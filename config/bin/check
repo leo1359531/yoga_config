@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+while [[ 1 ]];
+do
+
+    if ping reddit.com >> /dev/null;
+    then 
+        speak "i'm back"
+    fi
+    sleep 1
+
+done

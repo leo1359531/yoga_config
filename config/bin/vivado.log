@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Sep 29 19:03:58 2022
+# Process ID: 36251
+# Current directory: /home/leo/.config/bin
+# Command line: vivado
+# Log file: /home/leo/.config/bin/vivado.log
+# Journal file: /home/leo/.config/bin/vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 29 19:09:45 2022...

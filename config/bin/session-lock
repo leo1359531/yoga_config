@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+swayidle  \
+    timeout 60 'swaymsg "output * dpms off" && kb-light-off' \
+    resume 'swaymsg "output eDP-1 enable" && swaymsg "output * dpms on" && kb-light-on' &
+swaymsg "output eDP-1 enable"
+swaylock
+kill %%
