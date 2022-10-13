@@ -12,6 +12,7 @@ bison
 bluez
 bluez-utils
 brightnessctl
+btop
 btrfs-progs
 cowsay
 debugedit
@@ -28,6 +29,7 @@ foot
 fortune-mod
 gawk
 gcc
+gcc-ada
 gettext
 git
 grep
