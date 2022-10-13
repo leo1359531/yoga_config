@@ -1,0 +1,22 @@
+{
+	"description" : "An animated wallpaper with a KonoSuba character - Megumin. I hope that you'll like it!\n\nUsed Software :\nAdobe After Effects CC2014\n\nOriginal Artwork: https://wall.alphacoders.com/big.php?i=704387",
+	"file" : "iksde.mp4",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.2 0.13725490196078433 0.2196078431372549"
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Anime" ],
+	"title" : "Megumin - from KonoSuba",
+	"type" : "video",
+	"visibility" : "public"
+}
