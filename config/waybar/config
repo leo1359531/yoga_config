@@ -1,8 +1,8 @@
 {
     "height": 30,
-    "modules-left": ["wlr/workspaces","sway/workspaces", "custom/nas"],
+    "modules-left": ["sway/workspaces"],
     "modules-center": ["clock", "idle_inhibitor"],
-    "modules-right": ["custom/battery_save", "custom/weather", "sway/language", "network", "pulseaudio", "backlight", "custom/temp", "custom/watt", "battery", "custom/power"],
+    "modules-right": ["custom/weather", "sway/language", "network", "pulseaudio", "backlight", "custom/temp", "custom/watt", "battery", "custom/power"],
 
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
