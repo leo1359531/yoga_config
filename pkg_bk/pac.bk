@@ -3,6 +3,7 @@ alsa-utils
 amd-ucode
 archiso
 archlinux-keyring
+atool
 autoconf
 automake
 base
@@ -62,7 +63,9 @@ pipewire-alsa
 pipewire-pulse
 pkgconf
 polkit
+python-pillow
 python-pip
+python-pygments
 ranger
 rclone
 sed

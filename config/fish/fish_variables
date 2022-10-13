@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:lvim
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_LFS:/mnt/lfs
 SETUVAR _fish_abbr_c:clear
