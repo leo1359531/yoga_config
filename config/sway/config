@@ -26,8 +26,8 @@ client.unfocused        #333333 #282c34 #999999 #282c34   #282c34
 # keyboard layout
 input * {
     tap enabled
-        xkb_layout it,us
-        xkb_options grp:shifts_toggle
+            xkb_layout it,us
+            xkb_options grp:shifts_toggle
 }
 
 # displays
@@ -79,10 +79,10 @@ bindsym $mod+p exec echo 'cycle pause' | socat - /tmp/mpv-socket
 #
 
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f' \
          timeout 360 'swaymsg "output * dpms off"' \
          resume 'swaymsg "output * dpms on" && swaymsg "output eDP-1 enable"' \
-         before-sleep 'swaymsg "output eDP-1 enable" && swaylock -f -c 000000' 
+         before-sleep 'swaymsg "output eDP-1 enable" && swaylock -f' 
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -237,6 +237,9 @@ exec swayidle -w \
 # backlight
          bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl -d amdgpu_bl0 s +5
          bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d amdgpu_bl0 s 5-
+         
+         # bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
+         # bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # pamixer
          bindsym XF86AudioMute        exec --no-startup-id pamixer -t
