@@ -79,10 +79,10 @@ bindsym $mod+p exec echo 'cycle pause' | socat - /tmp/mpv-socket
 #
 
 exec swayidle -w \
-         timeout 300 'swaylock -f' \
-         timeout 360 'swaymsg "output * dpms off"' \
+         timeout 300 'lock' \
+         timeout 900 'swaymsg "output * dpms off"' \
          resume 'swaymsg "output * dpms on" && swaymsg "output eDP-1 enable"' \
-         before-sleep 'swaymsg "output eDP-1 enable" && swaylock -f' 
+         before-sleep "lock" 
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
