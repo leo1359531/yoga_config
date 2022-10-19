@@ -1,6 +1,6 @@
 # !/bin/bash
 
 export _JAVA_AWT_WM_NONREPARENTING=1
-~/Vivado/Install/Vivado/2017.3/bin/vivado
+~/Vivado/vivado_install/Vivado/2017.3/bin/vivado
 
 mv ~/vivado* ~/Vivado/
