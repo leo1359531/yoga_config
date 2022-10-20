@@ -2,6 +2,7 @@ brave-bin
 espanso-wayland-git
 hyprland
 ly
+macchina
 modprobed-db
 mpvpaper-git
 ncurses5-compat-libs
@@ -9,4 +10,5 @@ plexamp-appimage
 rofi-lbonn-wayland-git
 swaylock-effects
 upscayl-bin
+woeusb
 yay

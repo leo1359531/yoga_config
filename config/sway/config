@@ -52,7 +52,7 @@ set $term kitty
 # Your preferred terminal browser
 set $browser brave
 # Your preferred terminal filemanager
-set $filemanager nautilus
+set $filemanager $term -e ranger
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
