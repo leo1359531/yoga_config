@@ -17,6 +17,7 @@ btrfs-progs
 cowsay
 debugedit
 dhcpcd
+easyeffects
 efibootmgr
 exfat-utils
 fakeroot
@@ -64,6 +65,7 @@ python-pillow
 python-pip
 python-pygments
 python-requests
+qpwgraph
 ranger
 rclone
 shellcheck
