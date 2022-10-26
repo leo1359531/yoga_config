@@ -8,4 +8,4 @@ if pgrep swaybg &> /dev/null ; then killall swaybg ; fi
 ~/.config/rick_roll/roll.sh &
 
 killall kitty
-killall firefox
+killall brave

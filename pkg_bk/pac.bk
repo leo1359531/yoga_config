@@ -19,6 +19,7 @@ debugedit
 dhcpcd
 easyeffects
 efibootmgr
+exa
 exfat-utils
 fakeroot
 feh
@@ -36,6 +37,7 @@ groff
 gst-plugin-pipewire
 iw
 iwd
+kicad
 kitty
 libpipewire02
 libtool
@@ -52,15 +54,18 @@ nmap
 noto-fonts
 noto-fonts-emoji
 npm
+opendoas
 openvpn
 p7zip
 packagekit-qt5
 pamixer
 patch
+pavucontrol
 pipewire-alsa
 pipewire-pulse
 pkgconf
 polkit
+powertop
 python-pillow
 python-pip
 python-pygments
@@ -71,7 +76,6 @@ rclone
 shellcheck
 speedtest-cli
 ssh-tools
-sudo
 sway
 swaybg
 swayidle
@@ -85,8 +89,6 @@ ttf-nerd-fonts-symbols-2048-em
 unzip
 vi
 vim
-vulkan-radeon
-vulkan-tools
 waybar
 wget
 which
