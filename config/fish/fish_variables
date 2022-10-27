@@ -10,6 +10,8 @@ SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_pac:doas\x20pacman
 SETUVAR _fish_abbr_rm:trash
 SETUVAR _fish_abbr_s:kitty\x20\x2bkitten\x20ssh
+SETUVAR _fish_abbr_srm:doas\x20trash
+SETUVAR _fish_abbr_sudo:doas
 SETUVAR _fish_abbr_sv:doas\x20lvim
 SETUVAR _fish_abbr_v:lvim
 SETUVAR fish_color_autosuggestion:9C9C9C

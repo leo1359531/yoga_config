@@ -3,9 +3,9 @@
 notify-send "Disabling homevpn"
 sleep 1
 
-if sudo wg show | grep -q "peer";
+if doas wg show | grep -q "peer";
 then
-    if sudo wg-quick down miss;
+    if doas wg-quick down miss;
     then
         notify-send "Bye"
     else

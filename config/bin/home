@@ -3,9 +3,9 @@
 notify-send "Enabling homevpn"
 sleep 1
 
-if ! sudo wg show | grep -q "peer";
+if ! doas wg show | grep -q "peer";
 then
-    if sudo wg-quick up miss;
+    if doas wg-quick up miss;
     then
         notify-send "Welcome home"
     else
