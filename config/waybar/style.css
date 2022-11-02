@@ -1,10 +1,11 @@
-* {
+*{
   font-family: ComicCode;
   font-size: 20px;
   /*font-family: FantasqueSansMono;*/
   /*font-size: 22px;*/
   color: #fcfff4;
   border-radius: 0px;
+  padding: 0px 0px;
 }
 
 window#waybar {

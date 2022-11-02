@@ -38,6 +38,7 @@ gst-plugin-pipewire
 iw
 iwd
 kicad
+kicad-library
 kitty
 libpipewire02
 libtool
@@ -54,6 +55,7 @@ nmap
 noto-fonts
 noto-fonts-emoji
 npm
+octave
 opendoas
 openvpn
 p7zip
