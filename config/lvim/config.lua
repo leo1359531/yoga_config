@@ -15,6 +15,23 @@ set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
 
+require('cmp').setup({
+    sources = {
+        {
+            name = 'spell',
+            option = {
+                keep_all_entries = false,
+                enable_in_context = function()
+                    return true
+                end,
+            },
+        },
+    },
+})
+
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
+
 -- hdl-checker
 -- Only define once
 -- if not require'lspconfig.configs'.hdl_checker then

@@ -1,6 +1,7 @@
 brave-bin
 espanso-wayland-git
 hyprland
+libpipewire02
 ly
 macchina
 modprobed-db
@@ -8,6 +9,7 @@ mpvpaper-git
 ncurses5-compat-libs
 opendoas-sudo
 plexamp-appimage
+rankmirrors
 rofi-lbonn-wayland-git
 spotify
 spotify-ripper

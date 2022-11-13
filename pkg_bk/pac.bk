@@ -32,15 +32,16 @@ fortune-mod
 freecad
 gcc
 gcc-ada
+gimp
 git
 groff
 gst-plugin-pipewire
+gthumb
 iw
 iwd
 kicad
 kicad-library
 kitty
-libpipewire02
 libtool
 linux-firmware
 linux-zen
@@ -88,6 +89,7 @@ transmission-gtk
 trash-cli
 tree
 ttf-nerd-fonts-symbols-2048-em
+udiskie
 unzip
 vi
 vim

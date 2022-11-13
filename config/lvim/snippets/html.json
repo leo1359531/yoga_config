@@ -1,0 +1,8 @@
+{
+    "frag": {
+        "prefix": "frag",
+        "body": [
+            "<b class=\"fragment\">$1</b>"
+        ]
+    }
+}
