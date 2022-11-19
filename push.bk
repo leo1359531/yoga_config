@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DIR=$HOME/.bk/
+
+if ! pushd "$DIR";
+then
+    notify-send "dir error"
+    return 1
+fi
+
+git add bk.sh
+push.sh
+git add home
+git add config
+
+git commit -m "$(date)"
+
+git push -u origin main
+
+if ! popd;
+then
+    notify-send "big error"
+    return 1
+fi
