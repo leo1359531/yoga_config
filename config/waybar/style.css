@@ -51,6 +51,7 @@ button:hover {
     margin-top: 2px;
     margin-bottom: 2px;
     padding: 0px 4px;
+    padding-left: 8px;
 }
 
 #custom-power:hover{
