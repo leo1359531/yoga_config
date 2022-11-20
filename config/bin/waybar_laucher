@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 killall -9 waybar
 
-waybar -s /home/leo/.config/waybar/style-h.css
+waybar -s /home/leo/.config/waybar/style-h.css -c /home/leo/.config/waybar/config-h

@@ -1,6 +1,6 @@
 {
-    "height": 34,
-    "modules-left": ["sway/workspaces"],
+    "height": 30,
+    //"modules-left":, 
     "modules-center": ["clock", "idle_inhibitor"],
     "modules-right": ["sway/language", "network", "pulseaudio", "backlight", "custom/temp", "custom/watt", "battery", "custom/power"],
 
@@ -13,7 +13,7 @@
     },
 
     "network": {
-        "format-wifi": "直 {essid} ({signalStrength}%)",
+        "format-wifi": "{essid} ({signalStrength}%) 直",
         "format-ethernet": "慎",
         "format-disconnected": "睊",
         "max-length": 50,
@@ -33,15 +33,28 @@
         "spacing": 10
     },
     "backlight": {
-        "device": "amd_gpu",
-        "format": "{icon} {percent}%",
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "format-alt": "{:%Y-%m-%d}"
     },
-
+    // "cpu": {
+    //     "format": "{usage}% ",
+    //     "tooltip": false
+    // },
+    // "memory": {
+    //     "format": "{}% "
+    // },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [""]
+    },
     "battery": {
         "states": {
             // "good": 95,
@@ -49,20 +62,19 @@
             "critical": 10
         },
         "interval": 5,
-        "format": "{icon} {capacity}%",
+        "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         /* "format-plugged": "{capacity}% ", */
-        "format-alt": "{icon} {time}",
+        "format-alt": "{time} {icon}",
         /* "format-full": "", */
         "format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
-
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": " {volume}%",
-        "format-bluetooth-muted": " {volume}%",
-        "format-muted": "{icon} {volume}%",
+        "format": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% ",
+        "format-bluetooth-muted": "{volume}% ",
+        "format-muted": "{volume}% {icon} ",
         "format-source": "{volume}% ",
         /* "format-source-muted": " ",*/
         "format-source-muted": "",
@@ -78,7 +90,6 @@
         "on-click": "pavucontrol"
 
     },
-
     "custom/power": {
         /*"format": "",*/
         "format": "",
@@ -91,7 +102,7 @@
     "custom/watt": {
         "exec": "watt",
         "interval": 1,
-        "format": " {}",
+        "format": "{}  ",
     },
 
     "custom/weather": {
@@ -99,17 +110,31 @@
         "interval": 3600,
         "exec": "way-wttr.py",
         "return-type": "json",
-        "format": "{}"
+        "format": "{} "
+    },
+
+    "custom/nas": {
+        "exec": "NAS-icon",
+        "interval": 1,
+        "on-click": "NAS-icon -t",
+        "format": "  {}"
     },
 
     "custom/temp":{
         "exec": "cpu_temp",
         "interval": 1,
-        "format": " {}"
+        "format": " {} "
     },
 
     "sway/language":{
         "format": "{short}",
+    },
+
+    "custom/battery_save":{
+        "exec" : "battery_save",
+        "interval": 1,
+        "format": " {} ",
+        "on-click": "battery_save_toggle"
     }
 }
 

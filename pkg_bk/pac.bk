@@ -47,6 +47,7 @@ libtool
 linux-firmware
 linux-zen
 lsb-release
+lynx
 m4
 make
 mako
@@ -96,7 +97,6 @@ udiskie
 unzip
 vi
 vim
-waybar
 wget
 which
 wireguard-tools
