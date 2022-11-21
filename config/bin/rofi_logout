@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 question=$(echo "lock|suspend|poweroff|logout|reboot" | rofi -sep "|" \
-    -dmenu -i -p 'System' -lines 2 -width 10 -color-enabled)
+    -dmenu -i -p 'System' -lines 1 -width 1 -color-enabled)
 
 case $question in
     *lock)

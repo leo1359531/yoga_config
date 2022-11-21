@@ -6,7 +6,6 @@ SETUVAR _fish_abbr_LFS:/mnt/lfs
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_clone:cd\x20\x7e/Git\x20\x26\x26\x20git\x20clone
 SETUVAR _fish_abbr_l:ls\x20\x2dalh
-SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_pac:doas\x20pacman
 SETUVAR _fish_abbr_rm:trash
 SETUVAR _fish_abbr_s:kitty\x20\x2bkitten\x20ssh

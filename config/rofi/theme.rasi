@@ -1,39 +1,39 @@
 window {
-  /*width:            30%;
-height:           25%;*/
-  padding:          1;
-  text-color:       #89cff0;
-  background-color: #89cff0;
+    /* width:            30%; */
+    /* height:           25%; */
+    padding:          1;
+    text-color:       #89cff0;
+    background-color: #89cff0;
 }
 
 prompt {
-  padding:          4;
-  text-color:       #fcfff4;
-  background-color: #282c34;
+    padding:          4;
+    text-color:       #fcfff4;
+    background-color: #282c34;
 }
 
 entry {
-  padding:          4;
-  text-color:       #8be9fd;
-  background-color: #282c34;
+    padding:          4;
+    text-color:       #8be9fd;
+    background-color: #282c34;
 }
 
 inputbar {
 children: 		  [ prompt, entry ];
-padding:          10;
-border:           0 0 1;
+padding:          4;
+border:           0 0 0;
 text-color:       #fcfff4;
 background-color: #282c34;
 border-color:     #282c34;
 }
 
 listview {
-  columns:          2;
-  padding:          4;
-  cycle:            false;
-  dynamic:          true;
-  layout:           vertical;
-  background-color: #282c34;
+    columns:          3;
+    padding:          0;
+    cycle:            false;
+    dynamic:          true;
+    layout:           vertical;
+    background-color: #282c34;
 }
 
 mainbox {
@@ -42,44 +42,44 @@ background-color: #282c34;
 }
 
 element {
-  padding:          4;
-  text-color:       #a3ee8c;
-  background-color: #282c34;
+    padding:          4;
+    text-color:       #a3ee8c;
+    background-color: #282c34;
 }
 
 element-icon {
-  padding:          0 4 0;
-  text-color:       inherit;
-  background-color: #282c34;
+    padding:          0 4 0;
+    text-color:       inherit;
+    background-color: #282c34;
 }
 
 element-text {
-  text-color:       inherit;
-  background-color: inherit;
+    text-color:       inherit;
+    background-color: inherit;
 }
 
 element normal.urgent, element alternate.urgent {
-  text-color:       #fcfff4;
-  background-color: #282c34;
+    text-color:       #fcfff4;
+    background-color: #282c34;
 }
 
 element normal.active, element alternate.active {
-  text-color:       #fcfff4;
-  background-color: #282c34;
+    text-color:       #fcfff4;
+    background-color: #282c34;
 }
 
 element selected {
-  text-color:       #282c34;
-  background-color: #89cff0;
+    text-color:       #282c34;
+    background-color: #89cff0;
 }
 
 element selected.urgent {
-  text-color:       #282c34;
-  background-color: #282c34;
+    text-color:       #282c34;
+    background-color: #282c34;
 }
 
 element selected.active {
-  text-color:       #fcfff4;
-  background-color: #282c34;
+    text-color:       #fcfff4;
+    background-color: #282c34;
 }
 // vim:ft=css
