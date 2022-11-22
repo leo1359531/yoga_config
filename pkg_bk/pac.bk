@@ -107,5 +107,7 @@ xdg-desktop-portal
 xorg-xmodmap
 xorg-xrdb
 xorg-xwayland
+youtube-dl
+yt-dlp
 zip
 zram-generator

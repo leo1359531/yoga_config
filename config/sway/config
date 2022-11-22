@@ -51,7 +51,7 @@ set $filemanager $term -e ranger
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu rofi_run
-set $menu wofi --show run
+set $menu wofi_run
 
 ### Output configuration
 #
@@ -150,7 +150,7 @@ exec swayidle -w \
              bindsym $mod+Alt+d move right
 
 # Scratchpad, Floating
-             bindsym Control+Shift+space floating toggle
+             bindsym $mod+Control+space floating toggle
 
 # Workspaces:
 
@@ -212,10 +212,10 @@ exec swayidle -w \
              bindcode $mod+23 layout toggle splitv splith
 
 # Size
-             bindsym Control+Shift+Up    resize grow   width  1000 px or 20 ppt
-             bindsym Control+Shift+Down  resize shrink width  1000 px or 20 ppt
-             bindsym Control+Shift+Left  resize shrink width  50 px or 1 ppt
-             bindsym Control+Shift+Right resize grow   width  50 px or 1 ppt
+             bindsym $mod+Control+Up    resize grow   width  1000 px or 20 ppt
+             bindsym $mod+Control+Down  resize shrink width  1000 px or 20 ppt
+             bindsym $mod+Control+Left  resize shrink width  50 px or 1 ppt
+             bindsym $mod+Control+Right resize grow   width  50 px or 1 ppt
 
 # backlight
              bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl -d amdgpu_bl0 s +5
