@@ -102,6 +102,7 @@ wget
 which
 wireguard-tools
 wl-clipboard
+wofi
 xdg-desktop-portal
 xorg-xmodmap
 xorg-xrdb

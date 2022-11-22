@@ -1,0 +1,42 @@
+* {
+    transition: 0.0s;
+    color: #a3ee8c;
+}
+#window {
+    /*  background: rgb(249,255,150);*/
+    /*  background: linear-gradient(27deg, rgba(249,255,150,1) 0%, rgba(113,181,120,1) 54%, rgba(21,85,165,1) 100%);*/
+    background-image: url("file:///home/leo/Pictures/Wallpapers/Rick_Astley-1600x1069 (1).jpg");
+    background-position: 50% 30%;
+    background-size: 100%;
+    border-radius: 0px;
+    border: 2px solid #89cff4;
+}
+#input {
+    border-radius: 0px;
+    border-width: 0px;
+    margin: 5px 5px 5px 5px;
+    padding: 0px 5px;
+    background-color: #89cff4;
+    color: #282c34;
+}
+
+#outer-box {
+    padding: 5px;
+    font-family: 'ComicCode ';
+    font-size: 16px;
+}
+expander {
+    background-color: rgba(69, 29, 50, 0.0);
+    color: solid red;
+}
+#entry {
+    margin: 0px 5px;
+    padding: 5px 5px;
+    border-radius: 0px;
+}
+#entry:selected{
+    padding: 10px 10px;
+    background-color:rgba(40,44,52,0.8);
+    border: 2px solid #282c34;
+
+}

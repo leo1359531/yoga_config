@@ -15,7 +15,7 @@ gaps outer 0
 # class                 border  backgr. text    indicator child_border
 client.focused          #89cff0 #89cff0 #282c34 #89cff0   #89cff0
 client.focused_inactive #89cff0 #acc0ce #fcfff4 #acc0ce   #acc0ce
-client.unfocused        #282c34 #282c34 #fcfff4 #fcc500   #fcc500
+client.unfocused        #282c34 #282c34 #fcfff4 #fcc500   #282c34
 
 # keyboard layout
 input * {
@@ -50,7 +50,8 @@ set $filemanager $term -e ranger
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi_run
+# set $menu rofi_run
+set $menu wofi --show run
 
 ### Output configuration
 #

@@ -1,0 +1,10 @@
+fade-in=0
+ignore-empty-password
+show-failed-attempts
+indicator
+image=/home/leo/Pictures/Wallpapers/OOPSIE.png
+scaling=fill
+indicator-radius=0
+indicator-x-position=0
+indicator-y-position=0
+indicator-thickness=0
