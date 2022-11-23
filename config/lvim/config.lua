@@ -15,6 +15,14 @@ set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
 
+-- 
+
+require('glow').setup({
+  style = "dark",
+  width = 120,
+})
+
+
 require('cmp').setup({
     sources = {
         {
@@ -29,7 +37,7 @@ require('cmp').setup({
     },
 })
 
-vim.opt.spell = true
+-- vim.opt.spell = true
 -- vim.opt.spelllang = { 'en_us' }
 
 -- hdl-checker
@@ -52,9 +60,9 @@ vim.opt.spell = true
 
 -- require'lspconfig'.hdl_checker.setup{}
 
-require'lspconfig'.ghdl_ls.setup{}
+require 'lspconfig'.ghdl_ls.setup {}
 
-require'lspconfig'.bashls.setup{}
+require 'lspconfig'.bashls.setup {}
 
 
 -- general
@@ -213,12 +221,17 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+lvim.plugins = {
+    {
+        "Pocco81/auto-save.nvim",
+        config = function()
+            require("auto-save").setup()
+        end,
+    },
+    {
+        "ellisonleao/glow.nvim"
+    },
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {

@@ -50,7 +50,7 @@ set $filemanager $term -e ranger
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu rofi_run
+# set $menu wofi_run
 set $menu wofi_run
 
 ### Output configuration
@@ -112,7 +112,7 @@ exec swayidle -w \
              bindsym $mod+space exec $menu
 
 # Start your logout-commands
-             bindsym $mod+x exec rofi_logout
+             bindsym $mod+x exec wofi_logout
 
 # Start your wifi-menu
              bindsym $mod+u exec rofi_wifi_menu
