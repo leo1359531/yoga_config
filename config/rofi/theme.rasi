@@ -2,49 +2,30 @@
 
     
 * {
-	background:                      #282c34;
-	bordercolor:                     #89cff0;
-	separatorcolor:                  rgba(40,44,52,0);
-	normal-background:               #282c34;
-	normal-foreground:               #a3ee8c;
-	selected-normal-background:      #9be9fd;
-	selected-normal-foreground:      #282e34;
-	active-background:               #282c34;
-	active-foreground:               #a3ee8c;
-	alternate-active-background:     #eee8d5;
-	selected-active-background:      #268bd2;
-	selected-active-foreground:      #fdf6e3;
-	urgent-background:               #fdf6e3;
-	urgent-foreground:               #ef616a;
-	alternate-urgent-background:     #eee8d5;
-	selected-urgent-background:      #ef616a;
-	selected-urgent-foreground:      #fdf6e3;
-	foreground:                      @normal-foreground;
+	background:                     #282c34aa;
+	bordercolor:                    #89cff0;
+	separatorcolor:                 transparent;
+	normal-background:              transparent;
+	normal-foreground:              #a3ee8c;
+	selected-background:            #9be9fd;
+	selected-foreground:            #282e34;
+	foreground:                     @normal-foreground;
 }
 
 * {
     spacing:    2;
-    border-color: @foreground;
+    border-color: @background;
     background-color: transparent;
+    font: "comicCode 14";
 }
 #window {
-    border:     1;
+    width:      18.0%;
+    height:     30.0%;
+    border:     2;
     padding:    5;
-    background-color: @background;
-    background-image: url("/home/leo/Pictures/Rick-Astley-Never-Gonna-Give-You-Up.png");
-}
-#mainbox {
-    border:  0;
-    padding: 0;
-    background-color: transparent;
-}
-#message {
-    border:  1px dash 0px 0px ;
-    padding: 2px 0px 0px ;
-    border-color: @separatorcolor;
-}
-#textbox {
-    text-color: @foreground;
+    /* background-color: @background; */
+    background-image: url("/home/leo/Pictures/Wallpapers/Rick_Astley-1600x1069 (1).jpg", both);
+    border-color: @bordercolor;
 }
 #listview {
     border-color: @separatorcolor;
@@ -55,47 +36,18 @@
     padding:      2px 0px 0px ;
 }
 #element {
+    padding: 4;
     border: 0;
 }
-#element normal.normal {
-    text-color: @normal-foreground;
-    background-color: @normal-background;
+#element-text normal {
+    color: @normal-foreground;
 }
-#element normal.urgent {
-    text-color: @urgent-foreground;
-    background-color: @urgent-background;
-}
-#element normal.active {
-    text-color: @active-foreground;
-    background-color: @active-background;
-}
-#element selected.normal {
-    text-color: @selected-normal-foreground;
-    background-color: @selected-normal-background;
-}
-#element selected.urgent {
-    text-color: @selected-urgent-foreground;
-    background-color: @selected-urgent-background;
-}
-#element selected.active {
-    text-color: @selected-active-foreground;
-    background-color: @selected-active-background;
-}
-#scrollbar {
-    border:  0;
-    width: 4px;
-    padding: 0;
-    handle-color: @normal-foreground;
-}
-#sidebar {
-    border:       2px dash 0px 0px ;
-    border-color: @separatorcolor;
-}
-#button selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+#element selected {
+    background-color: @background;
 }
 #inputbar, case-indicator, entry, prompt, button {
-    spacing: 0;
-    text-color:      @normal-foreground;
+    padding: 2;
+    spacing: 1;
+    text-color:         @normal-foreground;
+    background-color:   @background;
 }
