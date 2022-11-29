@@ -1,85 +1,101 @@
-window {
-    /* width:            30%; */
-    /* height:           25%; */
-    font: "ComicCode 12";
-    padding:          1;
-    text-color:       #89cff0;
-    background-color: #89cff0;
+/* RASI Theme */
+
+    
+* {
+	background:                      #282c34;
+	bordercolor:                     #89cff0;
+	separatorcolor:                  rgba(40,44,52,0);
+	normal-background:               #282c34;
+	normal-foreground:               #a3ee8c;
+	selected-normal-background:      #9be9fd;
+	selected-normal-foreground:      #282e34;
+	active-background:               #282c34;
+	active-foreground:               #a3ee8c;
+	alternate-active-background:     #eee8d5;
+	selected-active-background:      #268bd2;
+	selected-active-foreground:      #fdf6e3;
+	urgent-background:               #fdf6e3;
+	urgent-foreground:               #ef616a;
+	alternate-urgent-background:     #eee8d5;
+	selected-urgent-background:      #ef616a;
+	selected-urgent-foreground:      #fdf6e3;
+	foreground:                      @normal-foreground;
 }
 
-prompt {
-    padding:          4;
-    text-color:       #fcfff4;
-    background-color: #282c34;
+* {
+    spacing:    2;
+    border-color: @foreground;
+    background-color: transparent;
 }
-
-entry {
-    padding:          4;
-    text-color:       #8be9fd;
-    background-color: #282c34;
+#window {
+    border:     1;
+    padding:    5;
+    background-color: @background;
+    background-image: url("/home/leo/Pictures/Rick-Astley-Never-Gonna-Give-You-Up.png");
 }
-
-inputbar {
-    children: 		  [ prompt, entry ];
-    padding:          4;
-    border:           0 0 0;
-    text-color:       #fcfff4;
-    background-color: #282c34;
-    border-color:     #282c34;
+#mainbox {
+    border:  0;
+    padding: 0;
+    background-color: transparent;
 }
-
-listview {
-    columns:          3;
-    padding:          0;
-    cycle:            false;
-    dynamic:          true;
-    layout:           vertical;
-    background-color: #282c34;
+#message {
+    border:  1px dash 0px 0px ;
+    padding: 2px 0px 0px ;
+    border-color: @separatorcolor;
 }
-
-mainbox {
-children:         [ inputbar, listview ];
-background-color: #282c34;
+#textbox {
+    text-color: @foreground;
 }
-
-element {
-    padding:          4;
-    text-color:       #a3ee8c;
-    background-color: #282c34;
+#listview {
+    border-color: @separatorcolor;
 }
-
-element-icon {
-    padding:          0 4 0;
-    text-color:       inherit;
-    background-color: #282c34;
+#listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    padding:      2px 0px 0px ;
 }
-
-element-text {
-    text-color:       inherit;
-    background-color: inherit;
+#element {
+    border: 0;
 }
-
-element normal.urgent, element alternate.urgent {
-    text-color:       #fcfff4;
-    background-color: #282c34;
+#element normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
 }
-
-element normal.active, element alternate.active {
-    text-color:       #fcfff4;
-    background-color: #282c34;
+#element normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
 }
-
-element selected {
-    text-color:       #282c34;
-    background-color: #89cff0;
+#element normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
 }
-
-element selected.urgent {
-    text-color:       #282c34;
-    background-color: #282c34;
+#element selected.normal {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
 }
-
-element selected.active {
-    text-color:       #fcfff4;
-    background-color: #282c34;
+#element selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+#element selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
+#scrollbar {
+    border:  0;
+    width: 4px;
+    padding: 0;
+    handle-color: @normal-foreground;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#inputbar, case-indicator, entry, prompt, button {
+    spacing: 0;
+    text-color:      @normal-foreground;
 }
