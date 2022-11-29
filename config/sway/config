@@ -112,10 +112,10 @@ exec swayidle -w \
              bindsym $mod+space exec $menu
 
 # Start your logout-commands
-             bindsym $mod+x exec wofi_logout
+             bindsym $mod+x exec rofi_logout
 
 # Start your wifi-menu
-             bindsym $mod+u exec rofi_wifi_menu
+             bindsym $mod+u exec $term -e iwctl
 
 # Reload the configuration file
              bindsym $mod+Shift+c reload
