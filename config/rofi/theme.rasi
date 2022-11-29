@@ -39,11 +39,15 @@
     padding: 4;
     border: 0;
 }
-#element-text normal {
-    color: @normal-foreground;
+#element-text {
+    text-color: inherit;
+}
+#element {
+    text-color: @normal-foreground;
 }
 #element selected {
-    background-color: @background;
+    text-color:         @selected-foreground;
+    background-color:   @selected-background;
 }
 #inputbar, case-indicator, entry, prompt, button {
     padding: 2;
