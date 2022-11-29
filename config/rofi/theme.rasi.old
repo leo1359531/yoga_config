@@ -1,7 +1,6 @@
 window {
     /* width:            30%; */
     /* height:           25%; */
-    font: "ComicCode 12";
     padding:          1;
     text-color:       #89cff0;
     background-color: #89cff0;
@@ -20,12 +19,12 @@ entry {
 }
 
 inputbar {
-    children: 		  [ prompt, entry ];
-    padding:          4;
-    border:           0 0 0;
-    text-color:       #fcfff4;
-    background-color: #282c34;
-    border-color:     #282c34;
+children: 		  [ prompt, entry ];
+padding:          4;
+border:           0 0 0;
+text-color:       #fcfff4;
+background-color: #282c34;
+border-color:     #282c34;
 }
 
 listview {
@@ -83,3 +82,4 @@ element selected.active {
     text-color:       #fcfff4;
     background-color: #282c34;
 }
+// vim:ft=css

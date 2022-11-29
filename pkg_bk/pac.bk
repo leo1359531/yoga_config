@@ -81,6 +81,7 @@ python-requests
 qpwgraph
 ranger
 rclone
+rustup
 shellcheck
 sl
 speedtest-cli
@@ -91,6 +92,7 @@ swayidle
 systemd-resolvconf
 telegram-desktop
 texinfo
+torbrowser-launcher
 transmission-gtk
 trash-cli
 tree
@@ -99,6 +101,7 @@ udiskie
 unzip
 vi
 vim
+waybar
 wget
 which
 wireguard-tools

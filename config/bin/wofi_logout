@@ -5,7 +5,7 @@ selected=$(echo -e $menu | wofi -W 21% --dmenu --line 5 --cache-file /dev/null -
 
 case $selected in
    shutdown)
-      exec poweroff;;
+      exec systemctl hibernate;;
    restart)
       exec reboot;;
    suspend)

@@ -5,7 +5,7 @@ libpipewire02
 ly
 macchina
 modprobed-db
-mpvpaper-git
+mpvpaper
 ncurses5-compat-libs
 nofetch-git
 opendoas-sudo
@@ -15,9 +15,9 @@ rofi-lbonn-wayland-git
 spotify
 spotify-ripper
 swaylock-effects
+swww
 upscayl-bin
 ventoy-bin
-waybar-hyprland
 wireguard-dkms
 woeusb
 xorg-fonts-misc-otb
