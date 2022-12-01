@@ -17,10 +17,7 @@ set.shiftwidth = 4
 
 -- 
 
-require('glow').setup({
-  style = "dark",
-  width = 120,
-})
+lvim.builtin.treesitter.rainbow.enable = true -- rainbow par
 
 
 require('cmp').setup({
@@ -145,80 +142,6 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
--- generic LSP settings
-
--- -- make sure server will always be installed even if the server is in skipped_servers list
--- lvim.lsp.installer.setup.ensure_installed = {
---     "sumeko_lua",
---     "jsonls",
--- }
--- -- change UI setting of `LspInstallInfo`
--- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
--- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
--- lvim.lsp.installer.setup.ui.border = "rounded"
--- lvim.lsp.installer.setup.ui.keymaps = {
---     uninstall_server = "d",
---     toggle_server_expand = "o",
--- }
-
--- ---@usage disable automatic installation of servers
--- lvim.lsp.installer.setup.automatic_installation = false
-
--- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
--- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
-
--- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
--- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
--- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
---   return server ~= "emmet_ls"
--- end, lvim.lsp.automatic_configuration.skipped_servers)
-
--- -- you can set a custom on_attach function that will be used for all the language servers
--- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
--- lvim.lsp.on_attach_callback = function(client, bufnr)
---   local function buf_set_option(...)
---     vim.api.nvim_buf_set_option(bufnr, ...)
---   end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
-
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "black", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
---   {
---     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "prettier",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--print-with", "100" },
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
-
--- -- set additional linters
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
--- }
 
 -- Additional Plugins
 lvim.plugins = {
@@ -229,20 +152,100 @@ lvim.plugins = {
         end,
     },
     {
-        "ellisonleao/glow.nvim"
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        ft = "markdown",
+        config = function()
+            vim.g.mkdp_auto_start = 1
+        end,
+    },
+    {
+        "echasnovski/mini.map",
+        branch = "stable",
+        config = function()
+            require('mini.map').setup()
+            local map = require('mini.map')
+            map.setup({
+                integrations = {
+                    map.gen_integration.builtin_search(),
+                    map.gen_integration.diagnostic({
+                        error = 'DiagnosticFloatingError',
+                        warn  = 'DiagnosticFloatingWarn',
+                        info  = 'DiagnosticFloatingInfo',
+                        hint  = 'DiagnosticFloatingHint',
+                    }),
+                },
+                symbols = {
+                    encode = map.gen_encode_symbols.dot('4x2'),
+                },
+                window = {
+                    side = 'right',
+                    width = 20, -- set to 1 for a pure scrollbar :)
+                    winblend = 15,
+                    show_integration_count = false,
+                },
+            })
+        end
+    },
+    {
+        "sindrets/diffview.nvim",
+        event = "BufRead",
+    },
+    {
+        "p00f/nvim-ts-rainbow",
+    },
+    {
+        "ray-x/lsp_signature.nvim",
+        event = "BufRead",
+        config = function() require"lsp_signature".on_attach() end,
+    },
+    {
+        "karb94/neoscroll.nvim",
+        event = "WinScrolled",
+        config = function()
+            require('neoscroll').setup({
+                -- All these keys will be mapped to their corresponding default scrolling animation
+                mappings = {'<C-u>', '<C-d>', '<C-b>', '<C-f>',
+                    '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
+                hide_cursor = true,          -- Hide cursor while scrolling
+                stop_eof = true,             -- Stop at <EOF> when scrolling downwards
+                use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+                respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+                cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+                easing_function = nil,        -- Default easing function
+                pre_hook = nil,              -- Function to run before the scrolling animation starts
+                post_hook = nil,              -- Function to run after the scrolling animation ends
+            })
+        end
     },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.json", "*.jsonc" },
---   -- enable wrap mode for json files only
---   command = "setlocal wrap",
--- })
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
+
+lvim.autocommands = {
+    {
+        {"BufEnter", "Filetype"},
+        {
+            desc = "Open mini.map and exclude some filetypes",
+            pattern = { "*" },
+            callback = function()
+                local exclude_ft = {
+                    "qf",
+                    "NvimTree",
+                    "toggleterm",
+                    "TelescopePrompt",
+                    "alpha",
+                    "netrw",
+                }
+
+                local map = require('mini.map')
+                if vim.tbl_contains(exclude_ft, vim.o.filetype) then
+                    vim.b.minimap_disable = true
+                    map.close()
+                elseif vim.o.buftype == "" then
+                    map.open()
+                end
+            end,
+        },
+    },
+}

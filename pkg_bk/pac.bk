@@ -54,6 +54,7 @@ m4
 make
 mako
 man-db
+mplayer
 neofetch
 neovim
 nmap
@@ -101,12 +102,12 @@ udiskie
 unzip
 vi
 vim
+vlc
 waybar
 wget
 which
 wireguard-tools
 wl-clipboard
-wofi
 xdg-desktop-portal
 xorg-xmodmap
 xorg-xrdb

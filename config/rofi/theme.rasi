@@ -23,7 +23,7 @@
     height:     534;
     border:     2;
     padding:    5;
-    /* background-color: @background; */
+    background-color: @background;
     background-image: url("/home/leo/Pictures/Wallpapers/Rick_Astley-1600x1069 (1).jpg", both);
     border-color: @bordercolor;
 }
