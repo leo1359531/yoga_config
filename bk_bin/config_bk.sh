@@ -16,4 +16,4 @@ cp -r -u ~/.config/pipewire/ ~/.backup/config/  # audio std to 192KHz
 cp -r -u ~/.config/swaylock/ ~/.backup/config/  # sway lock config
 cp -r -u ~/.config/hypr/ ~/.backup/config/      # work in progress
 cp -r -u ~/.config/rick_roll/ ~/.backup/config/ # work in progress
-cp -r -u ~/.config/wofi/ ~/.backup/config/      # work in progress
+cp -r -u ~/.config/wezterm/ ~/.backup/config/ # work in progress

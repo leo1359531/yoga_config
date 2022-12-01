@@ -16,7 +16,8 @@ gaps outer 0
 client.focused          #89cff0 #89cff0 #282c34 #89cff0   #89cff0
 client.focused_inactive #89cff0 #acc0ce #fcfff4 #acc0ce   #acc0ce
 client.unfocused        #282c34 #282c34 #fcfff4 #fcc500   #282c34
-
+client.urgent           #ef616a #ef616a #282c34 #ef616a   #ef616a
+ 
 # keyboard layout
 input * {
     tap enabled
@@ -42,7 +43,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term wezterm
 # Your preferred terminal browser
 set $browser brave
 # Your preferred terminal filemanager
