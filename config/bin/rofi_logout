@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-question=$(echo "lock|suspend|poweroff|logout|reboot" | rofi -sep "|" \
+question=$(echo "lock|suspend|hibernate|logout|reboot" | rofi -sep "|" \
     -dmenu -i -p 'System' -lines 1 -width 1 -color-enabled)
 
 case $question in
@@ -16,8 +16,8 @@ case $question in
     *suspend)
         swaymsg "output eDP-1 enable" && systemctl suspend
         ;;
-    *poweroff)
-        poweroff
+    *hibernate)
+        swaymsg "output eDP-1 enable" && systemctl hibernate
         ;;
     *)
         exit 0  # do nothing on wrong response

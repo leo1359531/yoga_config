@@ -3,6 +3,6 @@ function fish_greeting
 # fortune -a
 # echo ''
 # macchina
-nofetch
+nofetch | uwuify
 end
 end
