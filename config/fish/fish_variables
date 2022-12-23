@@ -2,7 +2,6 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:lvim
 SETUVAR __fish_initialized:3400
-SETUVAR _fish_abbr_LFS:/mnt/lfs
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_clone:cd\x20\x7e/Git\x20\x26\x26\x20git\x20clone
 SETUVAR _fish_abbr_l:ls\x20\x2dalh

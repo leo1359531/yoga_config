@@ -17,3 +17,4 @@ cp -r -u ~/.config/swaylock/ ~/.backup/config/  # sway lock config
 cp -r -u ~/.config/hypr/ ~/.backup/config/      # work in progress
 cp -r -u ~/.config/rick_roll/ ~/.backup/config/ # work in progress
 cp -r -u ~/.config/wezterm/ ~/.backup/config/ # work in progress
+cp -r -u ~/.config/Custom_Kernel/ ~/.backup/config/ # work in progress

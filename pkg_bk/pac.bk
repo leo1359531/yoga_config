@@ -11,6 +11,7 @@ automake
 base
 bc
 bison
+bitwarden
 bluez
 bluez-utils
 brightnessctl
@@ -33,6 +34,7 @@ font-manager
 foot
 fortune-mod
 freecad
+fzf
 gcc
 gcc-ada
 gimp
@@ -117,5 +119,7 @@ xorg-xrdb
 xorg-xwayland
 youtube-dl
 yt-dlp
+ytfzf
 zip
 zram-generator
+zsh
