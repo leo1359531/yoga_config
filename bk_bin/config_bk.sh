@@ -19,3 +19,5 @@ cp -r -u ~/.config/rick_roll/ ~/.backup/config/ # work in progress
 cp -r -u ~/.config/wezterm/ ~/.backup/config/ # work in progress
 cp -r -u ~/.config/jeprnel/ ~/.backup/config/ # work in progress
 rm -fr ~/.backup/config/jeprnel/.git/
+cp -r -u ~/.config/spotifyd/ ~/.backup/config/      # work in progress
+

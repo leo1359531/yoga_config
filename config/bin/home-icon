@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if sudo wg show | grep -q "peer";
-then
-    echo '  '
-else 
-    echo '🎩'
-fi

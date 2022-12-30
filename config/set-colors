@@ -13,12 +13,13 @@ green='#a3ee8c'
 grey='#acc0ce'
 nine='#999999'
 blue='#8be9fd'
+yellow='#ffc600'
 
 
 declare -a cl
 declare -a old_cl
 
-cl=($main $text $back $back_t $red $green $grey $nine $blue)
+cl=("$main" "$text" "$back" "$back_t" "$red" "$green" "$grey" "$nine" "$blue" "$yellow")
 
 
 i=0
@@ -31,6 +32,7 @@ done <$color_file
 
 # waybar
 waybar='/home/leo/.config/waybar/style.css'
+waybar_h='/home/leo/.config/waybar/style-h.css'
 #waybar='/home/leo/.config/waybar/try.css'
 sway='/home/leo/.config/sway/config'
 rofi='/home/leo/.config/rofi/theme.rasi'
@@ -39,8 +41,7 @@ mako='/home/leo/.config/mako/config'
 
 declare -a progs
 
-progs=($waybar $sway $rofi $swaylock $mako)
-#progs=($waybar)
+progs=("$waybar" "$waybar_h" "$sway" "$rofi" "$swaylock" "$mako")
 
 
 for prog in "${progs[@]}"
@@ -48,7 +49,7 @@ do
     i=0
     for color in "${cl[@]}"
     do
-        sed -i -e "s/${old_cl[$i]}/${cl[$i]}/g" $prog
+        sed -i -e "s/${old_cl[$i]}/${cl[$i]}/g" "$prog"
         ((i++))
     done
 done
@@ -57,5 +58,5 @@ mv $color_file $folder/colors_old
 
 for color in "${cl[@]}"
 do
-    echo $color >> $color_file
+    echo "$color" >> $color_file
 done

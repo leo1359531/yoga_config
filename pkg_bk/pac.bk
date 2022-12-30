@@ -17,10 +17,11 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
+clementine
 cowsay
+cronie
 debugedit
 dhcpcd
-easyeffects
 easytag
 efibootmgr
 exa
@@ -40,7 +41,6 @@ gcc-ada
 gimp
 git
 groff
-gst-plugin-pipewire
 gthumb
 iw
 iwd
@@ -75,6 +75,7 @@ pamixer
 patch
 pavucontrol
 pipewire-alsa
+pipewire-jack
 pipewire-pulse
 pkgconf
 polkit
@@ -90,7 +91,9 @@ rustup
 shellcheck
 sl
 speedtest-cli
+spotifyd
 ssh-tools
+sudo
 sway
 swaybg
 swayidle
@@ -112,6 +115,7 @@ wezterm
 wget
 which
 wireguard-tools
+wireplumber
 wl-clipboard
 xdg-desktop-portal
 xorg-xmodmap

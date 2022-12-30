@@ -11,4 +11,4 @@ killall swaybg
 sleep 0.1
 
 swaybg -m fill -i $wall_sega
-# mpvpaper -p -o "input-ipc-server=/tmp/mpv-socket --loop --mute" eDP-1 ~/Pictures/Wallpapers/861087035/iksde.mp4 &
+mpvpaper -p -o "input-ipc-server=/tmp/mpv-socket --loop --mute" eDP-1 ~/Pictures/Wallpapers/861087035/iksde.mp4 &

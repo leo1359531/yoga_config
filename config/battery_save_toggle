@@ -1,10 +1,10 @@
 #! /bin/bash
 
-if /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode | grep '1' > /dev/null 2>&1;
+if sudo cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004\:00/conservation_mode | grep '1' > /dev/null 2>&1;
 then
-    echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+    echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004\:00/conservation_mode
 else
-    echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+    echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004\:00/conservation_mode
 fi
 
 

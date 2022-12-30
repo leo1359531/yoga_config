@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-question=$(echo "lock|hibernate|logout|reboot" | rofi -sep "|" \
-    -dmenu -i -p 'System' -lines 2 -width 10 -color-enabled)
+question=$(echo "lock|suspend|hibernate|logout|reboot" | rofi -sep "|" \
+    -dmenu -i -p 'System' -lines 1 -width 1 -color-enabled)
 
 case $question in
     *lock)
@@ -11,10 +11,13 @@ case $question in
         swaymsg 'exit'
         ;;
     *reboot)
-        sudo reboot
+        reboot
+        ;;
+    *suspend)
+        swaymsg "output eDP-1 enable" && systemctl suspend
         ;;
     *hibernate)
-        swaymsg "output eDP-1 enable" && sudo systemctl hibernate
+        swaymsg "output eDP-1 enable" && systemctl hibernate
         ;;
     *)
         exit 0  # do nothing on wrong response
