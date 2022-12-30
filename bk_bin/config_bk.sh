@@ -2,7 +2,7 @@
 
 # copy all config manual made file fot github upload 
 
-cp -r -u ~/.config/bin/* ~/.backup/config/       # all my bin
+cp -r -u ~/.config/bin/ ~/.backup/config/       # all my bin
 cp -r -u ~/.config/fish/ ~/.backup/config/      # fish configs
 cp -r -u ~/.config/lvim/ ~/.backup/config/      # lunar vim 
 cp -r -u ~/.config/mako/ ~/.backup/config/      # notification utility

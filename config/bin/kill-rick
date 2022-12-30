@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if pgrep mpvpaper &> /dev/null ; then killall mpvpaper; fi
+if pgrep roll.sh &> /dev/null ; then killall roll.sh; fi
+
+set-wallpaper &

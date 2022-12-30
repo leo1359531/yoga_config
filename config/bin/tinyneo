@@ -1,0 +1,4 @@
+#!/bin/bash
+
+neofetch --config ~/.config/neofetch/tiny_config.conf --source ~/.config/neofetch/ascii/cute_penguin
+
