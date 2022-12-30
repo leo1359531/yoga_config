@@ -1,7 +1,0 @@
-#!/bin/bash
-
-pushd ~/.config/jeprnel >/dev/null || exit
-
-python jeprnel.py
-
-popd >/dev/null || exit
