@@ -77,6 +77,7 @@ pavucontrol
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+pipewire-zeroconf
 pkgconf
 polkit
 powertop
