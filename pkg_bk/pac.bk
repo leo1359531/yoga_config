@@ -49,6 +49,7 @@ kicad-library
 kitty
 libmp4v2
 libtool
+linux
 linux-firmware
 linux-zen
 lsb-release
@@ -67,7 +68,6 @@ noto-fonts-emoji
 npm
 obs-studio
 octave
-opendoas
 openvpn
 p7zip
 packagekit-qt5
