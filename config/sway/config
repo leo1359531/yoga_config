@@ -33,6 +33,9 @@ bindswitch lid:off output $laptop enable
 # focus doesn't follow mouse pointer
 focus_follows_mouse no
 
+# set inactive windows transparency
+exec /home/leo/.config/sway/inactive-windows-transparency.py
+
 ### Variables
 #
 # Logo key. Use mod1 for Alt.
