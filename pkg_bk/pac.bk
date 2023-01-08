@@ -99,6 +99,7 @@ sudo
 sway
 swaybg
 swayidle
+swaylock
 systemd-resolvconf
 telegram-desktop
 texinfo
