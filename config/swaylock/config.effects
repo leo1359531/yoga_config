@@ -1,10 +1,16 @@
+fade-in=1
 ignore-empty-password
 show-failed-attempts
-image=/home/leo/Pictures/Wallpapers/OOPSIE.png
+indicator
+image=/home/leo/Pictures/Wallpapers/lap.jpg
 scaling=fill
 font=ComicCode
 font-size=25
-indicator-radius=100
+clock
+effect-scale=1
+datestr=%a %e.%m.%Y 
+timestr=%k:%M
+indicator-radius=120
 indicator-thickness=5
 indicator-x-position=150
 indicator-y-position=150
